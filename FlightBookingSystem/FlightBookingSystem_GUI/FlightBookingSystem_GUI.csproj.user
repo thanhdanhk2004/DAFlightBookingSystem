@@ -16,6 +16,9 @@
     <Compile Update="Form\DienThongTinVe.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Form\LapLichChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form\MoDau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -35,6 +38,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form\TrangChuNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\TrangChuNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

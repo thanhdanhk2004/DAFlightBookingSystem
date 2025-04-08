@@ -1,4 +1,5 @@
 ﻿using DataTransferObject.DTO;
+using FlightBookingSystem_GUI;
 using FlightBookingSystem_GUI.GUI;
 using FlightBookingSytem_BLL.Service;
 using FlightBookingSytem_BLL.Session;
@@ -17,18 +18,15 @@ namespace PresentationLayer
     public partial class BanVe : Form
     {
         private BanVeService banVeService;
-        private Avatar Avatar;
         private bool flag = false;
         public BanVe()
         {
             InitializeComponent();
-            this.Avatar = new Avatar();
             this.banVeService = new BanVeService();
         }
 
         private void BanVe_Load(object sender, EventArgs e)
         {
-            this.Avatar.loadAvatar(picAvatar, lbHello);
             //Cho cac cot ra giua
             dgvChuyenBay.ColumnHeadersDefaultCellStyle.Alignment
                 = DataGridViewContentAlignment.MiddleCenter;
@@ -181,12 +179,9 @@ namespace PresentationLayer
                 else
                 {
                     DienThongTinVe dienThongTinVe = new DienThongTinVe();
-                    dienThongTinVe.TopLevel = false;
-                    panelMain.Controls.Clear();
-                    panelMain.Controls.Add(dienThongTinVe);
-                    dienThongTinVe.Dock = DockStyle.Fill;
-                    dienThongTinVe.FormBorderStyle = FormBorderStyle.None;
-                    dienThongTinVe.Show();
+                    TrangChuNhanVien trangChuNhanVien = (TrangChuNhanVien)this.ParentForm;
+                    if (trangChuNhanVien != null)
+                        trangChuNhanVien.formShow(dienThongTinVe);
                 }
             }
             this.flag = true;

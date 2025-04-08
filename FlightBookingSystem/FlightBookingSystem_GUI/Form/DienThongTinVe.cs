@@ -247,7 +247,10 @@ namespace PresentationLayer
             };
             this.banVeService.luuVeKhiBan(nguoiDungDTOs, tienDonHangDTO, cbPhuongThucThanhToan.Text);
             MessageBox.Show("Luu thanh cong");
-            
+            TrangChuNhanVien trangChuNhanVien = (TrangChuNhanVien)this.ParentForm;
+            BanVe banVe = new BanVe();
+            if(trangChuNhanVien != null)
+                trangChuNhanVien.formShow(banVe);
         }
     }
 }

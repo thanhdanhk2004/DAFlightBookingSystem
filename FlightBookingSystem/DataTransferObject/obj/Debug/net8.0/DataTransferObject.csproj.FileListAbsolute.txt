@@ -9,3 +9,4 @@ C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debu
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\refint\DataTransferObject.dll
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\DataTransferObject.pdb
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\ref\DataTransferObject.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\DataTransferObject.sourcelink.json

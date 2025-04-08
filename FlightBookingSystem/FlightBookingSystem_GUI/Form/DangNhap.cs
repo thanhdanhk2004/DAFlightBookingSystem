@@ -37,8 +37,8 @@ namespace PresentationLayer
                 }
                 else if(UserSession.vaiTro == "Employee")
                 {
-                    BanVe banVe = new BanVe();
-                    banVe.ShowDialog();
+                    TrangChuNhanVien trangChuNhanVien = new TrangChuNhanVien();
+                    trangChuNhanVien.ShowDialog();
                 }
                 else
                 {

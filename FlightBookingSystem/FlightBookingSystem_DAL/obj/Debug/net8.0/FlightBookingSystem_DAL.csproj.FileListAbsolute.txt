@@ -13,3 +13,4 @@ C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\ref\FlightBookingSystem_DAL.dll
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\FlightBookingSystem_DAL.runtimeconfig.json
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.genruntimeconfig.cache
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.sourcelink.json

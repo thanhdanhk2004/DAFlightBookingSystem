@@ -11,3 +11,4 @@ C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\refint\FlightBookingSytem_BLL.dll
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBookingSytem_BLL.pdb
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\ref\FlightBookingSytem_BLL.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBookingSytem_BLL.sourcelink.json
