@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "FlightBookingSystem_GUI/1.0.0": {
+        "runtime": {
+          "FlightBookingSystem_GUI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FlightBookingSystem_GUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\FlightBookingSystem_DAL.deps.json
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\FlightBookingSystem_DAL.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\FlightBookingSystem_DAL.pdb
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.csproj.AssemblyReference.cache
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.AssemblyInfoInputs.cache
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.AssemblyInfo.cs
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.csproj.CoreCompileInputs.cache
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBo.34F332FC.Up2Date
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\refint\FlightBookingSystem_DAL.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.pdb
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\ref\FlightBookingSystem_DAL.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\FlightBookingSystem_DAL.runtimeconfig.json
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_DAL\obj\Debug\net8.0\FlightBookingSystem_DAL.genruntimeconfig.cache

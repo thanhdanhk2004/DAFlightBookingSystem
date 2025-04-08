@@ -1,0 +1,11 @@
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\DataTransferObject.deps.json
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\DataTransferObject.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\DataTransferObject.pdb
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\DataTransferObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\DataTransferObject.AssemblyInfoInputs.cache
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\DataTransferObject.AssemblyInfo.cs
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\DataTransferObject.csproj.CoreCompileInputs.cache
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\DataTransferObject.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\refint\DataTransferObject.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\DataTransferObject.pdb
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\DataTransferObject\obj\Debug\net8.0\ref\DataTransferObject.dll

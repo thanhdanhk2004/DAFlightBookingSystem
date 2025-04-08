@@ -1,0 +1,13 @@
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\FlightBookingSytem_BLL.deps.json
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\FlightBookingSytem_BLL.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\bin\Debug\Debug\net8.0\FlightBookingSytem_BLL.pdb
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBookingSytem_BLL.csproj.AssemblyReference.cache
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBookingSytem_BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBookingSytem_BLL.AssemblyInfoInputs.cache
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBookingSytem_BLL.AssemblyInfo.cs
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBookingSytem_BLL.csproj.CoreCompileInputs.cache
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBo.92033442.Up2Date
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBookingSytem_BLL.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\refint\FlightBookingSytem_BLL.dll
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\FlightBookingSytem_BLL.pdb
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSytem_BLL\obj\Debug\net8.0\ref\FlightBookingSytem_BLL.dll
