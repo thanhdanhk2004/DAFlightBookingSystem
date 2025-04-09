@@ -49,7 +49,8 @@ namespace PresentationLayer
             DateTimePicker ngay = new DateTimePicker();
             ngay.Name = name + index.ToString();
             tableSanBayTrungGian.Controls.Add(ngay, col, index);
-            //ngay.ValueChanged += (sender, e) => ngayDung_ValueChanged(index);
+            if(index == 1)
+                ngay.ValueChanged += (sender, e) => ngayDung_ValueChanged(index);
             return ngay;
         }
 
@@ -100,13 +101,82 @@ namespace PresentationLayer
         }
 
         // Ap dieu kien thoi gian cho cac chuyen bay trung gian
-        public void rangBuocDungChan(DateTimePicker dateTimeNgayDung, DateTimePicker dateTimeGioDung, DateTimePicker dateTimeGioTiepTuc)
+        
+
+        private void ngayKhoiHanh_ValueChanged(object sender, EventArgs e)
+        {
+            thoiGianKhoiHanh.Value = ngayKhoiHanh.Value.Date;
+            ngayDen.MinDate = ngayKhoiHanh.Value;
+            if (ngayDen.Value == ngayKhoiHanh.Value)
+                thoiGianDen.MinDate = thoiGianKhoiHanh.Value.AddHours(2);
+
+            DateTimePicker dungChan1 = this.Controls.Find("ngayDung1", true).FirstOrDefault() as DateTimePicker;
+            if (dungChan1 != null)
+            {
+                dungChan1.MinDate = DateTimePicker.MinimumDateTime;
+                dungChan1.MaxDate = DateTimePicker.MaximumDateTime;
+                dungChan1.MinDate = ngayKhoiHanh.Value;
+                dungChan1.MaxDate = ngayDen.Value;
+            }
+            DateTimePicker dungChan2 = this.Controls.Find("ngayDung2", true).FirstOrDefault() as DateTimePicker;
+            if (dungChan2 != null)
+            {
+                MessageBox.Show("hi");
+                dungChan2.MinDate = DateTimePicker.MinimumDateTime;
+                dungChan2.MaxDate = DateTimePicker.MaximumDateTime;
+                dungChan2.MinDate = dungChan1.Value;
+                dungChan2.MaxDate = ngayDen.Value;
+            }
+        }
+
+        private void ngayDen_ValueChanged(object sender, EventArgs e)
+        {
+            if (ngayKhoiHanh.Value != ngayDen.Value)
+                thoiGianDen.MinDate = DateTimePicker.MinimumDateTime;
+            else
+                thoiGianDen.MinDate = thoiGianKhoiHanh.Value.AddHours(2);
+
+
+            DateTimePicker dungChan1 = this.Controls.Find("ngayDung1", true).FirstOrDefault() as DateTimePicker;
+            if (dungChan1 != null)
+            {
+                dungChan1.MaxDate = ngayDen.Value;
+            }
+            DateTimePicker dungChan2 = this.Controls.Find("ngayDung2", true).FirstOrDefault() as DateTimePicker;
+            if (dungChan2 != null)
+            {
+                dungChan2.MaxDate = ngayDen.Value;
+            }
+        }
+
+        private void thoiGianKhoiHanh_ValueChanged(object sender, EventArgs e)
+        {
+            if (ngayDen.Value == ngayKhoiHanh.Value)
+            {
+                thoiGianDen.Value = thoiGianKhoiHanh.Value.AddHours(2);
+                thoiGianDen.MinDate = thoiGianKhoiHanh.Value.AddHours(2);
+            }
+            else
+                thoiGianDen.MinDate = DateTimePicker.MinimumDateTime;
+        }
+
+
+        public void rangBuocDungChan(DateTimePicker dateTimeNgayDung, DateTimePicker dateTimeGioDung, DateTimePicker dateTimeGioTiepTuc, int index)
         {
             dateTimeNgayDung.MinDate = ngayKhoiHanh.Value;
             dateTimeNgayDung.MaxDate = ngayDen.Value;
-            dateTimeGioDung.Value = thoiGianKhoiHanh.Value.AddMinutes(30);
-            dateTimeGioTiepTuc.Value = dateTimeGioDung.Value.AddMinutes(15);
+            if(index == 1)
+            {
+                dateTimeGioDung.Value = thoiGianKhoiHanh.Value.AddMinutes(30);
+                dateTimeGioTiepTuc.Value = dateTimeGioDung.Value.AddMinutes(15);
+            }
+            else
+            {
+                dateTimeGioDung.Value = thoiGianKhoiHanh.Value.AddMinutes(60);
+                dateTimeGioTiepTuc.Value = dateTimeGioDung.Value.AddMinutes(15);
+            }
         }
+
         
         private void btThemChuyenBayTrungGian_Click(object sender, EventArgs e)
         {
@@ -135,7 +205,7 @@ namespace PresentationLayer
                 DateTimePicker gioTiepTuc1 = gioDungVaTiepTucTaiSanBayTrungGian(1, "gioTiepTuc", 4);
                 chinhThoiGian(gioTiepTuc1);
                 gioTiepTuc1.Enabled = false;
-                rangBuocDungChan(ngayDung1, gioDung1, gioTiepTuc1 );
+                rangBuocDungChan(ngayDung1, gioDung1, gioTiepTuc1, 1);
                 TextBox ghiChu1 = ghiChuSanBayTrungGian(1);
             }
             else
@@ -151,23 +221,14 @@ namespace PresentationLayer
                 chinhThoiGian(gioDung2);
                 DateTimePicker gioTiepTuc2 = gioDungVaTiepTucTaiSanBayTrungGian(2, "gioTiepTuc", 4);
                 chinhThoiGian(gioTiepTuc2);
-
+                rangBuocDungChan(ngayDung2, gioDung2, gioTiepTuc2, 2);
+                gioTiepTuc2.Enabled = false;
                 TextBox ghiChu1 = ghiChuSanBayTrungGian(2);
                 btThemChuyenBayTrungGian.Enabled = false;
                 btThemChuyenBayTrungGian.BackColor = Color.Gray;
             }
 
         }
-
-        private void ngayKhoiHanh_ValueChanged(object sender, EventArgs e)
-        {
-            thoiGianKhoiHanh.Value = ngayKhoiHanh.Value.Date;
-            ngayDen.MinDate = ngayKhoiHanh.Value;
-            if (ngayDen.Value == ngayKhoiHanh.Value)
-                thoiGianDen.MinDate = thoiGianKhoiHanh.Value.AddHours(2);
-
-        }
-
         private void btThem_Click(object sender, EventArgs e)
         {
             if (cbTuyenBay.Text == "") MessageBox.Show("Vui lòng chọn tuyến bay!", "Cảnh bảo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -175,25 +236,7 @@ namespace PresentationLayer
 
         }
 
-        private void ngayDen_ValueChanged(object sender, EventArgs e)
-        {
-            if (ngayKhoiHanh.Value != ngayDen.Value)
-                thoiGianDen.MinDate = DateTimePicker.MinimumDateTime;
-            else
-                thoiGianDen.MinDate = thoiGianKhoiHanh.Value.AddHours(2);
-
-        }
-
-        private void thoiGianKhoiHanh_ValueChanged(object sender, EventArgs e)
-        {
-            if (ngayDen.Value == ngayKhoiHanh.Value)
-            {
-                thoiGianDen.Value = thoiGianKhoiHanh.Value.AddHours(2);
-                thoiGianDen.MinDate = thoiGianKhoiHanh.Value.AddHours(2);
-            }
-            else
-                thoiGianDen.MinDate = DateTimePicker.MinimumDateTime;
-        }
+        
 
         private void thoiGianDung_ValueChanged(int index)
         {
@@ -202,5 +245,20 @@ namespace PresentationLayer
             if(gioDung != null && gioTiepTuc != null)
                 gioTiepTuc.Value = gioDung.Value.AddMinutes(15);
         }
+
+        private void ngayDung_ValueChanged(int index)
+        {
+            DateTimePicker ngayDung1 = this.Controls.Find("ngayDung1", true).FirstOrDefault() as DateTimePicker;
+            DateTimePicker ngayDung2 = this.Controls.Find("ngayDung2", true).FirstOrDefault() as DateTimePicker;
+            if(ngayDung2 != null && ngayDung1 != null)
+            {
+                ngayDung2.MinDate = DateTimePicker.MinimumDateTime;
+                ngayDung2.MaxDate = DateTimePicker.MaximumDateTime;
+                ngayDung2.MinDate = ngayDung1.Value;
+                ngayDung2.MaxDate = ngayDen.Value;
+            }
+        }
+
+
     }
 }

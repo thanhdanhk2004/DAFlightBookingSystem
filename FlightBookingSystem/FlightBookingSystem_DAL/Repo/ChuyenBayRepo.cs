@@ -17,6 +17,12 @@ namespace FlightBookingSystem_DAL.Repo
         {
             _context = new Context.DatabaseContext();
         }
+
+        public void themChuyenBay(ChuyenBay chuyenBay)
+        {
+            _context.ChuyenBays.Add(chuyenBay);
+            _context.SaveChanges();
+        }
         public List<ChuyenBayDTO> loadChuyenBay(string noiDi, string noiDen, string hangVe, DateTime ngayDi)
         {
             var result = from tb in _context.TuyenBays
