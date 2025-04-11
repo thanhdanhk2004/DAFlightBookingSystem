@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
@@ -16,6 +17,8 @@ namespace PresentationLayer
     public partial class LapLichChuyenBay : Form
     {
         private LapLichService lapLichService;
+        private bool flagSBTG1 = false;
+        private bool flagSBTG2 = false;
         public LapLichChuyenBay()
         {
             InitializeComponent();
@@ -36,9 +39,12 @@ namespace PresentationLayer
         private ComboBox sanBay(int index)
         {
             ComboBox comboBox = new ComboBox();
-            comboBox.Name = "SanBayTrungGian" + index.ToString();
+            comboBox.Name = "sanBayTrungGian" + index.ToString();
             comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox.Width = 150;
+            List<string> sanBays = lapLichService.loadDiaDiemSanBayService();
+            foreach(string s in sanBays)
+                comboBox.Items.Add(s);
             tableSanBayTrungGian.Controls.Add(comboBox, 1, index);
             return comboBox;
         }
@@ -49,7 +55,7 @@ namespace PresentationLayer
             DateTimePicker ngay = new DateTimePicker();
             ngay.Name = name + index.ToString();
             tableSanBayTrungGian.Controls.Add(ngay, col, index);
-            if(index == 1)
+            if (index == 1)
                 ngay.ValueChanged += (sender, e) => ngayDung_ValueChanged(index);
             return ngay;
         }
@@ -69,7 +75,7 @@ namespace PresentationLayer
         private TextBox ghiChuSanBayTrungGian(int index)
         {
             TextBox ghiChu = new TextBox();
-            ghiChu.Name = "GhiChu" + index.ToString();
+            ghiChu.Name = "ghiChu" + index.ToString();
             ghiChu.Width = 200;
             tableSanBayTrungGian.Controls.Add(ghiChu, 5, index);
             return ghiChu;
@@ -88,7 +94,7 @@ namespace PresentationLayer
             //Load cac tuyen bay
             List<TuyenBayDTO> tuyenBayDTOs = lapLichService.loadTuyenBayService();
             foreach (TuyenBayDTO t in tuyenBayDTOs)
-                cbTuyenBay.Items.Add(t.diaDiemDi + "(" + t.maDiaDiemDi + ")" + " -> " + t.diaDiemDen + "(" + t.maDiaDiemDen + ")");
+                cbTuyenBay.Items.Add("Từ " + t.diaDiemDi + " (" + t.maDiaDiemDi + ")" + " đến " + t.diaDiemDen + " (" + t.maDiaDiemDen + ")");
             //Load may bay
             List<string> mayBays = lapLichService.loadMayBay();
             foreach (string s in mayBays)
@@ -101,7 +107,7 @@ namespace PresentationLayer
         }
 
         // Ap dieu kien thoi gian cho cac chuyen bay trung gian
-        
+
 
         private void ngayKhoiHanh_ValueChanged(object sender, EventArgs e)
         {
@@ -165,7 +171,7 @@ namespace PresentationLayer
         {
             dateTimeNgayDung.MinDate = ngayKhoiHanh.Value;
             dateTimeNgayDung.MaxDate = ngayDen.Value;
-            if(index == 1)
+            if (index == 1)
             {
                 dateTimeGioDung.Value = thoiGianKhoiHanh.Value.AddMinutes(30);
                 dateTimeGioTiepTuc.Value = dateTimeGioDung.Value.AddMinutes(15);
@@ -177,7 +183,7 @@ namespace PresentationLayer
             }
         }
 
-        
+
         private void btThemChuyenBayTrungGian_Click(object sender, EventArgs e)
         {
             soSanBayTrungGian += 1;
@@ -185,6 +191,7 @@ namespace PresentationLayer
             {
                 tableSanBayTrungGian.Visible = true;
                 btThemChuyenBayTrungGian.Enabled = true;
+                flagSBTG1 = true;
                 Label soThuTu = thongTin("STT", 0, 0);
                 Label sanBayTrungGian = thongTin("Sân bay trung gian", 1, 0);
                 Label ngayDung = thongTin("Ngày dừng", 2, 0);
@@ -210,6 +217,7 @@ namespace PresentationLayer
             }
             else
             {
+                flagSBTG2 = true;
                 tableSanBayTrungGian.RowStyles.Add(new RowStyle(SizeType.Percent, 38F));
                 Label sanBayTrungGian1 = thongTin("2", 0, 2);
                 ComboBox sanBay1 = sanBay(2);
@@ -229,20 +237,80 @@ namespace PresentationLayer
             }
 
         }
+
+
         private void btThem_Click(object sender, EventArgs e)
         {
             if (cbTuyenBay.Text == "") MessageBox.Show("Vui lòng chọn tuyến bay!", "Cảnh bảo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else if (cbMayBay.Text == "") MessageBox.Show("Vui lòng chọn máy bay", "Cảnh bảo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                // Lay ma san bay di va ma san bay den
+                string mau = @"\((.*?)\)";
+                List<string> maSanBay = new List<string>();
+                MatchCollection matches = Regex.Matches(cbTuyenBay.Text, mau);
+                foreach (Match match in matches)
+                {
+                    maSanBay.Add(match.Groups[1].Value);
+                }
 
+                string soHieuMB = cbMayBay.Text;
+                //
+                DateTime TGDi = ngayKhoiHanh.Value.Date.Add(thoiGianKhoiHanh.Value.TimeOfDay);
+                DateTime TGDen = ngayDen.Value.Date.Add(thoiGianDen.Value.TimeOfDay);
+                float soTien = float.Parse(cbSoTienTrieu.Text) * 1000000 + float.Parse(cbSoTienTram.Text) * 100000 + float.Parse(cbSoTienChuc.Text) * 10000;
+                MessageBox.Show(maSanBay[0]);
+                MessageBox.Show(maSanBay[1]);
+                if(flagSBTG1 == true)
+                {
+                    ComboBox cbSanBayTrungGian1 = this.Controls.Find("sanBayTrungGian1", true).FirstOrDefault() as ComboBox;
+                    DateTimePicker ngayDungChan1 = this.Controls.Find("ngayDung1", true).FirstOrDefault() as DateTimePicker;
+                    DateTimePicker gioDungChan1 = this.Controls.Find("gioDung1", true).FirstOrDefault() as DateTimePicker;
+                    DateTimePicker gioTiepTuc1 = this.Controls.Find("gioTiepTuc1", true).FirstOrDefault() as DateTimePicker;
+                    DateTime thoiGianDungChan1 = ngayDungChan1.Value.Date.Add(gioDungChan1.Value.TimeOfDay);
+                    DateTime thoiGianTiepTuc1 = ngayDungChan1.Value.Date.Add(gioTiepTuc1.Value.TimeOfDay);
+                    TextBox ghiChu1 = this.Controls.Find("ghiChu1", true).FirstOrDefault() as TextBox;
+                    
+
+                    if (flagSBTG2 == true)
+                    {
+                        ComboBox cbSanBayTrungGian2 = this.Controls.Find("sanBayTrungGian2", true).FirstOrDefault() as ComboBox;
+                        DateTimePicker ngayDungChan2 = this.Controls.Find("ngayDung2", true).FirstOrDefault() as DateTimePicker;
+                        DateTimePicker gioDungChan2 = this.Controls.Find("gioDung2", true).FirstOrDefault() as DateTimePicker;
+                        DateTimePicker gioTiepTuc2 = this.Controls.Find("gioTiepTuc2", true).FirstOrDefault() as DateTimePicker;
+                        DateTime thoiGianDungChan2 = ngayDungChan2.Value.Date.Add(gioDungChan2.Value.TimeOfDay);
+                        DateTime thoiGianTiepTuc2 = ngayDungChan2.Value.Date.Add(gioTiepTuc2.Value.TimeOfDay);
+                        TextBox ghiChu2 = this.Controls.Find("ghiChu2", true).FirstOrDefault() as TextBox;
+                        if (cbSanBayTrungGian2.Text == cbSanBayTrungGian1.Text)
+                        {
+                            MessageBox.Show("Hai sân bay trung gian không được trùng", "Cảnh bảo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                        else
+                            lapLichService.themChuyenBayService(maSanBay[0], maSanBay[1], soHieuMB, TGDi, TGDen,
+                                soTien, cbSanBayTrungGian1.Text, thoiGianDungChan1, thoiGianTiepTuc1, ghiChu1.Text,
+                                cbSanBayTrungGian2.Text, thoiGianDungChan2, thoiGianTiepTuc2, ghiChu2.Text);
+                            
+                    }
+                    else
+                        lapLichService.themChuyenBayService(maSanBay[0], maSanBay[1], soHieuMB, TGDi, TGDen,
+                                soTien, cbSanBayTrungGian1.Text, thoiGianDungChan1, thoiGianTiepTuc1, ghiChu1.Text);
+                }
+                else
+                    lapLichService.themChuyenBayService(maSanBay[0], maSanBay[1], soHieuMB, TGDi, TGDen, soTien);
+                flagSBTG1 = flagSBTG2 = false;
+                
+                MessageBox.Show("Thêm chuyến bay thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        
+
 
         private void thoiGianDung_ValueChanged(int index)
         {
-            DateTimePicker gioDung = this.Controls.Find("gioDung"+index, true).FirstOrDefault() as DateTimePicker;
+            DateTimePicker gioDung = this.Controls.Find("gioDung" + index, true).FirstOrDefault() as DateTimePicker;
             DateTimePicker gioTiepTuc = this.Controls.Find("gioTiepTuc" + index, true).FirstOrDefault() as DateTimePicker;
-            if(gioDung != null && gioTiepTuc != null)
+            if (gioDung != null && gioTiepTuc != null)
                 gioTiepTuc.Value = gioDung.Value.AddMinutes(15);
         }
 
@@ -250,7 +318,7 @@ namespace PresentationLayer
         {
             DateTimePicker ngayDung1 = this.Controls.Find("ngayDung1", true).FirstOrDefault() as DateTimePicker;
             DateTimePicker ngayDung2 = this.Controls.Find("ngayDung2", true).FirstOrDefault() as DateTimePicker;
-            if(ngayDung2 != null && ngayDung1 != null)
+            if (ngayDung2 != null && ngayDung1 != null)
             {
                 ngayDung2.MinDate = DateTimePicker.MinimumDateTime;
                 ngayDung2.MaxDate = DateTimePicker.MaximumDateTime;
@@ -259,6 +327,19 @@ namespace PresentationLayer
             }
         }
 
+        private void cbSoTienTrieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbSoTien.Text = (float.Parse(cbSoTienTrieu.Text) * 1000000 + float.Parse(cbSoTienTram.Text) * 100000 + float.Parse(cbSoTienChuc.Text) * 10000).ToString("N0") + " VND";
+        }
 
+        private void cbSoTienTram_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbSoTien.Text = (float.Parse(cbSoTienTrieu.Text) * 1000000 + float.Parse(cbSoTienTram.Text) * 100000 + float.Parse(cbSoTienChuc.Text) * 10000).ToString("N0") + " VND";
+        }
+
+        private void cbSoTienChuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbSoTien.Text = (float.Parse(cbSoTienTrieu.Text) * 1000000 + float.Parse(cbSoTienTram.Text) * 100000 + float.Parse(cbSoTienChuc.Text) * 10000).ToString("N0") + " VND";
+        }
     }
 }

@@ -39,9 +39,10 @@ namespace FlightBookingSystem_DAL.Repo
 
         public string loadMaTuyenBay(string maSanBayDi, string maSanBayDen)
         {
-            return _context.TuyenBays
+            var result = _context.TuyenBays
                 .Where(tb => tb.MaSanBayDi == maSanBayDi && tb.MaSanBayDen == maSanBayDen)
-                .Select(tb => tb.MaTuyenBay).ToString();
+                .Select(tb => tb.MaTuyenBay);
+            return result.ToString();
         }
     }
 }

@@ -33,7 +33,7 @@
             thoiGianKhoiHanh = new DateTimePicker();
             tableSanBayTrungGian = new TableLayoutPanel();
             btThemChuyenBayTrungGian = new Button();
-            label12 = new Label();
+            lbSoTien = new Label();
             cbSoTienChuc = new ComboBox();
             cbSoTienTram = new ComboBox();
             cbSoTienTrieu = new ComboBox();
@@ -63,7 +63,7 @@
             panel3.Controls.Add(thoiGianKhoiHanh);
             panel3.Controls.Add(tableSanBayTrungGian);
             panel3.Controls.Add(btThemChuyenBayTrungGian);
-            panel3.Controls.Add(label12);
+            panel3.Controls.Add(lbSoTien);
             panel3.Controls.Add(cbSoTienChuc);
             panel3.Controls.Add(cbSoTienTram);
             panel3.Controls.Add(cbSoTienTrieu);
@@ -145,16 +145,16 @@
             btThemChuyenBayTrungGian.UseVisualStyleBackColor = false;
             btThemChuyenBayTrungGian.Click += btThemChuyenBayTrungGian_Click;
             // 
-            // label12
+            // lbSoTien
             // 
-            label12.Font = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.Red;
-            label12.Location = new Point(769, 287);
-            label12.Name = "label12";
-            label12.Size = new Size(211, 56);
-            label12.TabIndex = 26;
-            label12.Text = "1.700.000 VND";
-            label12.TextAlign = ContentAlignment.MiddleLeft;
+            lbSoTien.Font = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbSoTien.ForeColor = Color.Red;
+            lbSoTien.Location = new Point(769, 287);
+            lbSoTien.Name = "lbSoTien";
+            lbSoTien.Size = new Size(211, 56);
+            lbSoTien.TabIndex = 26;
+            lbSoTien.Text = "1.700.000 VND";
+            lbSoTien.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // cbSoTienChuc
             // 
@@ -167,6 +167,7 @@
             cbSoTienChuc.Size = new Size(194, 33);
             cbSoTienChuc.TabIndex = 25;
             cbSoTienChuc.Text = "0";
+            cbSoTienChuc.SelectedIndexChanged += cbSoTienChuc_SelectedIndexChanged;
             // 
             // cbSoTienTram
             // 
@@ -179,18 +180,20 @@
             cbSoTienTram.Size = new Size(202, 33);
             cbSoTienTram.TabIndex = 24;
             cbSoTienTram.Text = "0";
+            cbSoTienTram.SelectedIndexChanged += cbSoTienTram_SelectedIndexChanged;
             // 
             // cbSoTienTrieu
             // 
             cbSoTienTrieu.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbSoTienTrieu.FormattingEnabled = true;
-            cbSoTienTrieu.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+            cbSoTienTrieu.Items.AddRange(new object[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" });
             cbSoTienTrieu.Location = new Point(30, 296);
             cbSoTienTrieu.Margin = new Padding(3, 4, 3, 4);
             cbSoTienTrieu.Name = "cbSoTienTrieu";
             cbSoTienTrieu.Size = new Size(210, 33);
             cbSoTienTrieu.TabIndex = 23;
             cbSoTienTrieu.Text = "1";
+            cbSoTienTrieu.SelectedIndexChanged += cbSoTienTrieu_SelectedIndexChanged;
             // 
             // label11
             // 
@@ -399,7 +402,7 @@
         private System.Windows.Forms.DateTimePicker ngayDen;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbSoTien;
         private System.Windows.Forms.ComboBox cbSoTienChuc;
         private System.Windows.Forms.ComboBox cbSoTienTram;
         private System.Windows.Forms.ComboBox cbSoTienTrieu;
