@@ -139,7 +139,6 @@ namespace FlightBookingSytem_BLL.Service
                     MaVe = "Ve" + DateTime.Now.ToString("yyyyMMddHHmmss") + i.ToString(),
                     LoaiVe = ThongTinChuyenBaySession.loaiVe,
                     NgayXuatVe = DateTime.Now,
-                    TrangThaiVe = "Chưa bay",
                     MaDH = donHang.MaDH,
                     MaNguoiSoHuu = i == 0?u.IdNguoiDung:nguoiDung.IdNguoiDung,
                 };
@@ -161,6 +160,7 @@ namespace FlightBookingSytem_BLL.Service
                     MaChuyenBay = ThongTinChuyenBayLuotDiSession.maChuyenBay,
                     MaVe = ve.MaVe,
                     MaHL = hanhLyDi.MaHL,
+                    TrangThaiVe = "Chưa bay",
                     GiaVe = nguoiDungDTOs[i].giaTienChuyenBayLuotDi,
                     MaGhe = gheRepo.loadMaGhe(ThongTinChuyenBayLuotDiSession.maChuyenBay, ThongTinChuyenBaySession.hangVe == "Phổ thông" ? "PHOTHONG" : "THUONGGIA")
                 };
@@ -184,6 +184,7 @@ namespace FlightBookingSytem_BLL.Service
                         MaChuyenBay = ThongTinChuyenBayLuotVeSesstion.maChuyenBay,
                         MaVe = ve.MaVe,
                         MaHL = hanhLyVe.MaHL,
+                        TrangThaiVe = "Chưa bay",
                         GiaVe = nguoiDungDTOs[i].giaTienChuyenBayLuotVe,
                         MaGhe = gheRepo.loadMaGhe(ThongTinChuyenBayLuotVeSesstion.maChuyenBay, ThongTinChuyenBaySession.hangVe == "Phổ thông" ? "PHOTHONG" : "THUONGGIA")
                     };

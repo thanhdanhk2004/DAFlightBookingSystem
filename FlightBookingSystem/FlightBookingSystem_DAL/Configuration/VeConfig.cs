@@ -17,7 +17,6 @@ namespace FlightBookingSystem_DAL.DatabaseContext
             builder.HasKey(t => t.MaVe);
             builder.Property(t => t.LoaiVe).IsRequired();
             builder.Property(t => t.NgayXuatVe).HasDefaultValue(DateTime.Now);
-            builder.Property(t => t.TrangThaiVe).HasDefaultValue("Chưa hoàn thành");
 
             // Khoa ngoai Ve va DonHang
             builder.HasOne(t => t.DonHang)

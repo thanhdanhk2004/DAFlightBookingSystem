@@ -19,5 +19,10 @@ namespace FlightBookingSystem_DAL.Repo
             _context.GiaVeChuyenBays.Add(giaVeChuyenBay);
             _context.SaveChanges();
         }
+
+        public int layMaGheLonNhat()
+        {
+            return _context.GiaVeChuyenBays.Max(gv => gv.MaHangGhe);
+        }
     }
 }

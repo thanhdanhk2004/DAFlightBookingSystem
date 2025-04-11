@@ -259,9 +259,8 @@ namespace PresentationLayer
                 DateTime TGDi = ngayKhoiHanh.Value.Date.Add(thoiGianKhoiHanh.Value.TimeOfDay);
                 DateTime TGDen = ngayDen.Value.Date.Add(thoiGianDen.Value.TimeOfDay);
                 float soTien = float.Parse(cbSoTienTrieu.Text) * 1000000 + float.Parse(cbSoTienTram.Text) * 100000 + float.Parse(cbSoTienChuc.Text) * 10000;
-                MessageBox.Show(maSanBay[0]);
-                MessageBox.Show(maSanBay[1]);
-                if(flagSBTG1 == true)
+
+                if (flagSBTG1 == true)
                 {
                     ComboBox cbSanBayTrungGian1 = this.Controls.Find("sanBayTrungGian1", true).FirstOrDefault() as ComboBox;
                     DateTimePicker ngayDungChan1 = this.Controls.Find("ngayDung1", true).FirstOrDefault() as DateTimePicker;
@@ -270,7 +269,7 @@ namespace PresentationLayer
                     DateTime thoiGianDungChan1 = ngayDungChan1.Value.Date.Add(gioDungChan1.Value.TimeOfDay);
                     DateTime thoiGianTiepTuc1 = ngayDungChan1.Value.Date.Add(gioTiepTuc1.Value.TimeOfDay);
                     TextBox ghiChu1 = this.Controls.Find("ghiChu1", true).FirstOrDefault() as TextBox;
-                    
+
 
                     if (flagSBTG2 == true)
                     {
@@ -290,7 +289,7 @@ namespace PresentationLayer
                             lapLichService.themChuyenBayService(maSanBay[0], maSanBay[1], soHieuMB, TGDi, TGDen,
                                 soTien, cbSanBayTrungGian1.Text, thoiGianDungChan1, thoiGianTiepTuc1, ghiChu1.Text,
                                 cbSanBayTrungGian2.Text, thoiGianDungChan2, thoiGianTiepTuc2, ghiChu2.Text);
-                            
+
                     }
                     else
                         lapLichService.themChuyenBayService(maSanBay[0], maSanBay[1], soHieuMB, TGDi, TGDen,
@@ -299,7 +298,7 @@ namespace PresentationLayer
                 else
                     lapLichService.themChuyenBayService(maSanBay[0], maSanBay[1], soHieuMB, TGDi, TGDen, soTien);
                 flagSBTG1 = flagSBTG2 = false;
-                
+
                 MessageBox.Show("Thêm chuyến bay thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

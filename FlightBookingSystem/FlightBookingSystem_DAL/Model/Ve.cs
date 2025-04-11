@@ -11,7 +11,6 @@ namespace FlightBookingSystem_DAL.Model
         public string MaVe {  get; set; }
         public string LoaiVe {  get; set; } // Ve 1 chieu hay khu hoi
         public DateTime NgayXuatVe {  get; set; }
-        public string TrangThaiVe { get; set; }
         public string MaDH {  get; set; }
         public int MaNguoiSoHuu { get; set; }
         public DonHang DonHang { get; set; }

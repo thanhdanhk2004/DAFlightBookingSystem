@@ -43,10 +43,17 @@ namespace FlightBookingSystem_GUI
             form.Show();
         }
 
+
         private void btLapLich_Click(object sender, EventArgs e)
         {
             LapLichChuyenBay lapLichChuyenBay = new LapLichChuyenBay();
             this.formShow(lapLichChuyenBay);
+        }
+
+        private void btHuyVe_Click(object sender, EventArgs e)
+        {
+            HuyVeNhanVien huyVeNhanVien = new HuyVeNhanVien();
+            this.formShow(huyVeNhanVien);
         }
     }
 }

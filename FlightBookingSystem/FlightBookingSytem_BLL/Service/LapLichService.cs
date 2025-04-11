@@ -39,13 +39,14 @@ namespace FlightBookingSytem_BLL.Service
             return mayBayRepo.loadMayBay(); 
         }
 
+        
         public void themChuyenBayService(string maSanBayDi, string maSanBayDen, string soHieuMB, DateTime thoiGianKhoiHanh, DateTime thoiGianDen, float soTien)
         {
             string maTuyenBay = tuyenBayRepo.loadMaTuyenBay(maSanBayDi, maSanBayDen);
             Console.WriteLine(maTuyenBay);
             ChuyenBay chuyenBay = new ChuyenBay
             {
-                MaChuyenBay = "CB" + DateTime.Now,
+                MaChuyenBay = "CB" + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 ThoiGianDi = thoiGianKhoiHanh,
                 ThoiGianDen = thoiGianDen,
                 SoHieuMB = soHieuMB,
@@ -55,7 +56,7 @@ namespace FlightBookingSytem_BLL.Service
 
             LichBay lichBay = new LichBay
             {
-                MaLich = "LB" + DateTime.Now,
+                MaLich = "LB" + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 NgayLapLich = DateTime.Now,
                 MaChuyenBay = chuyenBay.MaChuyenBay,
                 MaNV = UserSession.IdNguoiDung
@@ -65,16 +66,14 @@ namespace FlightBookingSytem_BLL.Service
             //Tao gia ve pho thong va thuong gia
             GiaVeChuyenBay giaVeChuyenBayPhoThong = new GiaVeChuyenBay
             {
-                MaHangGhe = int.Parse(DateTime.Now.ToString()) + 1,
                 GiaVe = soTien,
                 LoaiGhe = "PHOTHONG",
                 MaCB = chuyenBay.MaChuyenBay
             };
             GiaVeChuyenBay giaVeChuyenBayThuongGia = new GiaVeChuyenBay
             {
-                MaHangGhe = int.Parse(DateTime.Now.ToString()) + 1,
-                GiaVe = soTien,
-                LoaiGhe = "ThuongGia",
+                GiaVe = soTien + 200000,
+                LoaiGhe = "THUONGGIA",
                 MaCB = chuyenBay.MaChuyenBay
             };
             giaVeChuyenBayRepo.themGiaVeChuyenBay(giaVeChuyenBayThuongGia);
@@ -83,13 +82,13 @@ namespace FlightBookingSytem_BLL.Service
 
         }
 
-        public void themChuyenBayService(string maSanBayDi, string maSanBayDen, string soHieuMB, DateTime thoiGianKhoiHanh, DateTime thoiGianDen, float soTien, string maSBTG1, DateTime thoiGianDungChan1,DateTime thoiGianTiepTuc1, string ghiChu1)
+        public void themChuyenBayService(string maSanBayDi, string maSanBayDen, string soHieuMB, DateTime thoiGianKhoiHanh, DateTime thoiGianDen, float soTien, string diaDiem1, DateTime thoiGianDungChan1,DateTime thoiGianTiepTuc1, string ghiChu1)
         {
             string maTuyenBay = tuyenBayRepo.loadMaTuyenBay(maSanBayDi, maSanBayDen);
 
             ChuyenBay chuyenBay = new ChuyenBay
             {
-                MaChuyenBay = "CB" + DateTime.Now,
+                MaChuyenBay = "CB" + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 ThoiGianDi = thoiGianKhoiHanh,
                 ThoiGianDen = thoiGianDen,
                 SoHieuMB = soHieuMB,
@@ -99,7 +98,7 @@ namespace FlightBookingSytem_BLL.Service
 
             LichBay lichBay = new LichBay
             {
-                MaLich = "LB" + DateTime.Now,
+                MaLich = "LB" + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 NgayLapLich = DateTime.Now,
                 MaChuyenBay = chuyenBay.MaChuyenBay,
                 MaNV = UserSession.IdNguoiDung
@@ -109,16 +108,14 @@ namespace FlightBookingSytem_BLL.Service
             //Tao gia ve pho thong va thuong gia
             GiaVeChuyenBay giaVeChuyenBayPhoThong = new GiaVeChuyenBay
             {
-                MaHangGhe = int.Parse(DateTime.Now.ToString()) + 1,
                 GiaVe = soTien,
                 LoaiGhe = "PHOTHONG",
                 MaCB = chuyenBay.MaChuyenBay
             };
             GiaVeChuyenBay giaVeChuyenBayThuongGia = new GiaVeChuyenBay
             {
-                MaHangGhe = int.Parse(DateTime.Now.ToString()) + 1,
-                GiaVe = soTien,
-                LoaiGhe = "ThuongGia",
+                GiaVe = soTien + 200000,
+                LoaiGhe = "THUONGGIA",
                 MaCB = chuyenBay.MaChuyenBay
             };
             giaVeChuyenBayRepo.themGiaVeChuyenBay(giaVeChuyenBayThuongGia);
@@ -126,10 +123,10 @@ namespace FlightBookingSytem_BLL.Service
 
             SanBayTrungGian sanBayTrungGian1 = new SanBayTrungGian
             {
-                MaSanBayTrungGian = "SBTG1" + DateTime.Now.ToString(),
+                MaSanBayTrungGian = "SBTG1" + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 MaTuyenBay = maTuyenBay,
                 MaChuyenBay = chuyenBay.MaChuyenBay,
-                MaSanBay = maSBTG1,
+                MaSanBay = sanBayRepo.loadMaSanBay(diaDiem1),
                 ThoiGianDungChan = thoiGianDungChan1,
                 ThoiGianTiepTuc = thoiGianTiepTuc1,
                 GhiChu = ghiChu1,
@@ -137,13 +134,13 @@ namespace FlightBookingSytem_BLL.Service
             sanBayTrungGianRepo.themSanBayTrungGian(sanBayTrungGian1);
         }
 
-        public void themChuyenBayService(string maSanBayDi, string maSanBayDen, string soHieuMB, DateTime thoiGianKhoiHanh, DateTime thoiGianDen, float soTien, string maSBTG1, DateTime thoiGianDungChan1, DateTime thoiGianTiepTuc1, string ghiChu1, string maSBTG2, DateTime thoiGianDungChan2, DateTime thoiGianTiepTuc2, string ghiChu2)
+        public void themChuyenBayService(string maSanBayDi, string maSanBayDen, string soHieuMB, DateTime thoiGianKhoiHanh, DateTime thoiGianDen, float soTien, string diaDiem1, DateTime thoiGianDungChan1, DateTime thoiGianTiepTuc1, string ghiChu1, string diaDiem2, DateTime thoiGianDungChan2, DateTime thoiGianTiepTuc2, string ghiChu2)
         {
             string maTuyenBay = tuyenBayRepo.loadMaTuyenBay(maSanBayDi, maSanBayDen);
 
             ChuyenBay chuyenBay = new ChuyenBay
             {
-                MaChuyenBay = "CB" + DateTime.Now,
+                MaChuyenBay = "CB" + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 ThoiGianDi = thoiGianKhoiHanh,
                 ThoiGianDen = thoiGianDen,
                 SoHieuMB = soHieuMB,
@@ -153,7 +150,7 @@ namespace FlightBookingSytem_BLL.Service
 
             LichBay lichBay = new LichBay
             {
-                MaLich = "LB" + DateTime.Now,
+                MaLich = "LB" + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 NgayLapLich = DateTime.Now,
                 MaChuyenBay = chuyenBay.MaChuyenBay,
                 MaNV = UserSession.IdNguoiDung
@@ -163,16 +160,14 @@ namespace FlightBookingSytem_BLL.Service
             //Tao gia ve pho thong va thuong gia
             GiaVeChuyenBay giaVeChuyenBayPhoThong = new GiaVeChuyenBay
             {
-                MaHangGhe = int.Parse(DateTime.Now.ToString()) + 1,
                 GiaVe = soTien,
                 LoaiGhe = "PHOTHONG",
                 MaCB = chuyenBay.MaChuyenBay
             };
             GiaVeChuyenBay giaVeChuyenBayThuongGia = new GiaVeChuyenBay
             {
-                MaHangGhe = int.Parse(DateTime.Now.ToString()) + 1,
-                GiaVe = soTien,
-                LoaiGhe = "ThuongGia",
+                GiaVe = soTien + 200000,
+                LoaiGhe = "THUONGGIA",
                 MaCB = chuyenBay.MaChuyenBay
             };
             giaVeChuyenBayRepo.themGiaVeChuyenBay(giaVeChuyenBayThuongGia);
@@ -180,20 +175,20 @@ namespace FlightBookingSytem_BLL.Service
 
             SanBayTrungGian sanBayTrungGian1 = new SanBayTrungGian
             {
-                MaSanBayTrungGian = "SBTG1" + DateTime.Now.ToString(),
+                MaSanBayTrungGian = "SBTG1" + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 MaTuyenBay = maTuyenBay,
                 MaChuyenBay = chuyenBay.MaChuyenBay,
-                MaSanBay = maSBTG1,
+                MaSanBay = sanBayRepo.loadMaSanBay(diaDiem1),
                 ThoiGianDungChan = thoiGianDungChan1,
                 ThoiGianTiepTuc = thoiGianTiepTuc1,
                 GhiChu = ghiChu1,
             };
             SanBayTrungGian sanBayTrungGian2 = new SanBayTrungGian
             {
-                MaSanBayTrungGian = "SBTG2" + DateTime.Now.ToString(),
+                MaSanBayTrungGian = "SBTG2" + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 MaTuyenBay = maTuyenBay,
                 MaChuyenBay = chuyenBay.MaChuyenBay,
-                MaSanBay = maSBTG2,
+                MaSanBay = sanBayRepo.loadMaSanBay(diaDiem2),
                 ThoiGianDungChan = thoiGianDungChan2,
                 ThoiGianTiepTuc = thoiGianTiepTuc2,
                 GhiChu = ghiChu2,

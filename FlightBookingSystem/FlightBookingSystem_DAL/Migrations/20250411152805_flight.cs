@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace FlightBookingSystem_DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class fligt : Migration
+    public partial class flight : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -75,7 +75,7 @@ namespace FlightBookingSystem_DAL.Migrations
                     DiaChi = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     SoDienThoai = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
-                    NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 8, 0, 37, 39, 74, DateTimeKind.Local).AddTicks(3765)),
+                    NgaySinh = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 11, 22, 28, 4, 640, DateTimeKind.Local).AddTicks(630)),
                     SoCCCD = table.Column<string>(type: "nvarchar(12)", maxLength: 12, nullable: true),
                     GioiTinh = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -163,7 +163,7 @@ namespace FlightBookingSystem_DAL.Migrations
                 {
                     MaNV = table.Column<int>(type: "int", nullable: false),
                     Luong = table.Column<float>(type: "real", nullable: false),
-                    NgayVaoLam = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 8, 0, 37, 39, 92, DateTimeKind.Local).AddTicks(2773)),
+                    NgayVaoLam = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 11, 22, 28, 4, 667, DateTimeKind.Local).AddTicks(5162)),
                     GhiChu = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -249,7 +249,7 @@ namespace FlightBookingSystem_DAL.Migrations
                 columns: table => new
                 {
                     MaDH = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    NgayDatHang = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 8, 0, 37, 39, 96, DateTimeKind.Local).AddTicks(4941)),
+                    NgayDatHang = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 11, 22, 28, 4, 675, DateTimeKind.Local).AddTicks(4282)),
                     TongGiaTriDonHang = table.Column<float>(type: "real", nullable: false),
                     MaKH = table.Column<int>(type: "int", nullable: false)
                 },
@@ -344,7 +344,7 @@ namespace FlightBookingSystem_DAL.Migrations
                 {
                     MaThanhToan = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SoTien = table.Column<float>(type: "real", nullable: false),
-                    NgayThanhToan = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 8, 0, 37, 39, 106, DateTimeKind.Local).AddTicks(7882)),
+                    NgayThanhToan = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 11, 22, 28, 4, 693, DateTimeKind.Local).AddTicks(6411)),
                     PhuongThucThanhToan = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MaDH = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
@@ -365,8 +365,7 @@ namespace FlightBookingSystem_DAL.Migrations
                 {
                     MaVe = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     LoaiVe = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NgayXuatVe = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 8, 0, 37, 39, 135, DateTimeKind.Local).AddTicks(4248)),
-                    TrangThaiVe = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "Chưa hoàn thành"),
+                    NgayXuatVe = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 11, 22, 28, 4, 724, DateTimeKind.Local).AddTicks(1737)),
                     MaDH = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     MaNguoiSoHuu = table.Column<int>(type: "int", nullable: false)
                 },
@@ -410,7 +409,7 @@ namespace FlightBookingSystem_DAL.Migrations
                 columns: table => new
                 {
                     MaLich = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    NgayLapLich = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 8, 0, 37, 39, 127, DateTimeKind.Local).AddTicks(6173)),
+                    NgayLapLich = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2025, 4, 11, 22, 28, 4, 717, DateTimeKind.Local).AddTicks(5981)),
                     MaChuyenBay = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     MaNV = table.Column<int>(type: "int", nullable: false)
                 },
@@ -468,7 +467,8 @@ namespace FlightBookingSystem_DAL.Migrations
                     MaVe = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     MaHL = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     MaGhe = table.Column<int>(type: "int", nullable: false),
-                    GiaVe = table.Column<float>(type: "real", nullable: false)
+                    GiaVe = table.Column<float>(type: "real", nullable: false),
+                    TrangThaiVe = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FlightBookingSystem_DAL.Migrations
 {
     [DbContext(typeof(Context.DatabaseContext))]
-    [Migration("20250407173739_fligt")]
-    partial class fligt
+    [Migration("20250411152805_flight")]
+    partial class flight
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,6 +62,10 @@ namespace FlightBookingSystem_DAL.Migrations
                     b.Property<string>("MaVe")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TrangThaiVe")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaChiTietVe");
 
@@ -117,7 +121,7 @@ namespace FlightBookingSystem_DAL.Migrations
                     b.Property<DateTime>("NgayDatHang")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2025, 4, 8, 0, 37, 39, 96, DateTimeKind.Local).AddTicks(4941));
+                        .HasDefaultValue(new DateTime(2025, 4, 11, 22, 28, 4, 675, DateTimeKind.Local).AddTicks(4282));
 
                     b.Property<float>("TongGiaTriDonHang")
                         .HasColumnType("real");
@@ -320,7 +324,7 @@ namespace FlightBookingSystem_DAL.Migrations
                     b.Property<DateTime>("NgayLapLich")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2025, 4, 8, 0, 37, 39, 127, DateTimeKind.Local).AddTicks(6173));
+                        .HasDefaultValue(new DateTime(2025, 4, 11, 22, 28, 4, 717, DateTimeKind.Local).AddTicks(5981));
 
                     b.HasKey("MaLich");
 
@@ -375,7 +379,7 @@ namespace FlightBookingSystem_DAL.Migrations
                     b.Property<DateTime>("NgaySinh")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2025, 4, 8, 0, 37, 39, 74, DateTimeKind.Local).AddTicks(3765));
+                        .HasDefaultValue(new DateTime(2025, 4, 11, 22, 28, 4, 640, DateTimeKind.Local).AddTicks(630));
 
                     b.Property<string>("SoCCCD")
                         .HasMaxLength(12)
@@ -417,7 +421,7 @@ namespace FlightBookingSystem_DAL.Migrations
                     b.Property<DateTime>("NgayVaoLam")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2025, 4, 8, 0, 37, 39, 92, DateTimeKind.Local).AddTicks(2773));
+                        .HasDefaultValue(new DateTime(2025, 4, 11, 22, 28, 4, 667, DateTimeKind.Local).AddTicks(5162));
 
                     b.HasKey("MaNV");
 
@@ -536,7 +540,7 @@ namespace FlightBookingSystem_DAL.Migrations
                     b.Property<DateTime>("NgayThanhToan")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2025, 4, 8, 0, 37, 39, 106, DateTimeKind.Local).AddTicks(7882));
+                        .HasDefaultValue(new DateTime(2025, 4, 11, 22, 28, 4, 693, DateTimeKind.Local).AddTicks(6411));
 
                     b.Property<string>("PhuongThucThanhToan")
                         .IsRequired()
@@ -595,13 +599,7 @@ namespace FlightBookingSystem_DAL.Migrations
                     b.Property<DateTime>("NgayXuatVe")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2025, 4, 8, 0, 37, 39, 135, DateTimeKind.Local).AddTicks(4248));
-
-                    b.Property<string>("TrangThaiVe")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(max)")
-                        .HasDefaultValue("Chưa hoàn thành");
+                        .HasDefaultValue(new DateTime(2025, 4, 11, 22, 28, 4, 724, DateTimeKind.Local).AddTicks(1737));
 
                     b.HasKey("MaVe");
 

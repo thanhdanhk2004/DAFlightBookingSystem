@@ -20,6 +20,11 @@ namespace FlightBookingSystem_DAL.Repo
             return _context.SanBays.Select(a => a.DiaDiem).ToList();
         }
 
-
+        public string loadMaSanBay(string diaDiem)
+        {
+            return _context.SanBays.Where(sb => sb.DiaDiem == diaDiem)
+                    .Select(sb => sb.MaSanBay)
+                    .FirstOrDefault().ToString();
+        }
     }
 }

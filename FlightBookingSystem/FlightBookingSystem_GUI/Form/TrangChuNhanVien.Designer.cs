@@ -69,6 +69,7 @@
             btHuyVe.TabIndex = 9;
             btHuyVe.Text = "Hủy vé";
             btHuyVe.UseVisualStyleBackColor = false;
+            btHuyVe.Click += btHuyVe_Click;
             // 
             // btThongTinVe
             // 

@@ -14,6 +14,7 @@ namespace FlightBookingSystem_DAL.Model
         public string MaHL { get; set; }
         public int MaGhe {  get; set; }
         public float GiaVe { get; set; } // Gia cua mot chuyen di hoac ve
+        public string TrangThaiVe {  get; set; }
         public ChuyenBay ChuyenBay { get; set; }
         public Ve Ve { get; set; }
         public HanhLy HanhLy { get; set; }
