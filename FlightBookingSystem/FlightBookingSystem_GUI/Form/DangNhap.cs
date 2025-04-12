@@ -42,7 +42,8 @@ namespace PresentationLayer
                 }
                 else
                 {
-                    //
+                    TrangChuAdmin trangChuAdmin = new TrangChuAdmin();
+                    trangChuAdmin.ShowDialog();
                 }
                 this.Close();
             }

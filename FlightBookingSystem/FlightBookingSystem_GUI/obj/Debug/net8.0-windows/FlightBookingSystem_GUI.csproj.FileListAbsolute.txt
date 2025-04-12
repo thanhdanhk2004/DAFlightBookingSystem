@@ -37,3 +37,5 @@ C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_GUI\obj
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_GUI\obj\Debug\net8.0-windows\FlightBookingSystem_GUI.TrangChuNhanVien.resources
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_GUI\obj\Debug\net8.0-windows\FlightBookingSystem_GUI.sourcelink.json
 C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_GUI\obj\Debug\net8.0-windows\FlightBookingSystem_GUI.HuyVeNhanVien.resources
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_GUI\obj\Debug\net8.0-windows\FlightBookingSystem_GUI.TrangChuAdmin.resources
+C:\Users\add\Pictures\DoAnLTCSDL\FlightBookingSystem\FlightBookingSystem_GUI\obj\Debug\net8.0-windows\FlightBookingSystem_GUI.BaoCaoThongKe.resources

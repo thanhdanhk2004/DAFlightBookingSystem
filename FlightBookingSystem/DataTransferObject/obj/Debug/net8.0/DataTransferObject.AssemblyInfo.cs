@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataTransferObject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c453ffdb9ac4b768e9de673af14dc1d4ea2fb58")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+957c1cb069ba318f367b75a50423dda38b40a965")]
 [assembly: System.Reflection.AssemblyProductAttribute("DataTransferObject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataTransferObject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

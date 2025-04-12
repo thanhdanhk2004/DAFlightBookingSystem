@@ -34,6 +34,7 @@ namespace FlightBookingSystem_GUI
                     await Task.Delay(120);
             }
             //this.taiKhoanService.taoTaiKhoanNhanVien();
+            //this.taiKhoanService.taoTaiKhoanAdmin();
             this.Hide();
             TrangChu trangChu = new TrangChu();
             trangChu.ShowDialog();

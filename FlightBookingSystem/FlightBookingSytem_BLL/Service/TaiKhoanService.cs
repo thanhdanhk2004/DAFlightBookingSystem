@@ -123,5 +123,16 @@ namespace FlightBookingSytem_BLL.Service
             };
             taiKhoanRepo.themTaiKhoan(tk);
         }
+        public void taoTaiKhoanAdmin()
+        {
+            TaiKhoan tk = new TaiKhoan
+            {
+                TenDangNhap = "LeThanhDanVit",
+                MatKhau = BCrypt.Net.BCrypt.HashPassword("1"),
+                IdNguoiDung = 1,
+                VaiTro = "Admin"
+            };
+            taiKhoanRepo.themTaiKhoan(tk);
+        }
     }
 }
