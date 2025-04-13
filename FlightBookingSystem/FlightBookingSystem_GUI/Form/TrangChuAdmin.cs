@@ -38,5 +38,11 @@ namespace FlightBookingSystem_GUI
             BaoCaoThongKe baoCaoThongKe = new BaoCaoThongKe();
             formShow(baoCaoThongKe);
         }
+
+        private void btQuanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            TaiKhoanNhanVien taiKhoanNhanVien = new TaiKhoanNhanVien();
+            formShow(taiKhoanNhanVien);
+        }
     }
 }

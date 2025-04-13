@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsystem_gui\\form\\baocaothongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|solutionrelative:flightbookingsystem_gui\\form\\baocaothongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsystem_gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|solutionrelative:flightbookingsystem_gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\flightbookingsystem_gui\\form\\baocaothongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|solutionrelative:flightbookingsystem_gui\\form\\baocaothongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsystem_gui\\form\\taikhoannhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|solutionrelative:flightbookingsystem_gui\\form\\taikhoannhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3868F9-28B7-4899-9D73-96B8EB4BC469}|FlightBookingSytem_BLL\\FlightBookingSytem_BLL.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsytem_bll\\service\\thongkedoanhthuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3868F9-28B7-4899-9D73-96B8EB4BC469}|FlightBookingSytem_BLL\\FlightBookingSytem_BLL.csproj|solutionrelative:flightbookingsytem_bll\\service\\thongkedoanhthuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsystem_gui\\form\\taikhoannhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|solutionrelative:flightbookingsystem_gui\\form\\taikhoannhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F0CF390-D4EE-467A-B6DB-53B7C3EA7B09}|FlightBookingSystem_DAL\\FlightBookingSystem_DAL.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsystem_dal\\repo\\thongkedoanhthurepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F0CF390-D4EE-467A-B6DB-53B7C3EA7B09}|FlightBookingSystem_DAL\\FlightBookingSystem_DAL.csproj|solutionrelative:flightbookingsystem_dal\\repo\\thongkedoanhthurepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F0CF390-D4EE-467A-B6DB-53B7C3EA7B09}|FlightBookingSystem_DAL\\FlightBookingSystem_DAL.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsystem_dal\\repo\\nhanvienrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F0CF390-D4EE-467A-B6DB-53B7C3EA7B09}|FlightBookingSystem_DAL\\FlightBookingSystem_DAL.csproj|solutionrelative:flightbookingsystem_dal\\repo\\nhanvienrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsystem_gui\\form\\trangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8D4A1A6F-14D9-451D-94C2-A274B09192A2}|FlightBookingSystem_GUI\\FlightBookingSystem_GUI.csproj|solutionrelative:flightbookingsystem_gui\\form\\trangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F0CF390-D4EE-467A-B6DB-53B7C3EA7B09}|FlightBookingSystem_DAL\\FlightBookingSystem_DAL.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsystem_dal\\repo\\thanhtoanrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F0CF390-D4EE-467A-B6DB-53B7C3EA7B09}|FlightBookingSystem_DAL\\FlightBookingSystem_DAL.csproj|solutionrelative:flightbookingsystem_dal\\repo\\thanhtoanrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3868F9-28B7-4899-9D73-96B8EB4BC469}|FlightBookingSytem_BLL\\FlightBookingSytem_BLL.csproj|c:\\users\\add\\pictures\\doanltcsdl\\flightbookingsystem\\flightbookingsytem_bll\\service\\taikhoanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3868F9-28B7-4899-9D73-96B8EB4BC469}|FlightBookingSytem_BLL\\FlightBookingSytem_BLL.csproj|solutionrelative:flightbookingsytem_bll\\service\\taikhoanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,78 +46,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TrangChuAdmin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\TrangChuAdmin.cs",
-              "RelativeDocumentMoniker": "FlightBookingSystem_GUI\\Form\\TrangChuAdmin.cs",
-              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\TrangChuAdmin.cs [Design]",
-              "RelativeToolTip": "FlightBookingSystem_GUI\\Form\\TrangChuAdmin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T16:59:47.862Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ThongKeDoanhThuService.cs",
-              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSytem_BLL\\Service\\ThongKeDoanhThuService.cs",
-              "RelativeDocumentMoniker": "FlightBookingSytem_BLL\\Service\\ThongKeDoanhThuService.cs",
-              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSytem_BLL\\Service\\ThongKeDoanhThuService.cs",
-              "RelativeToolTip": "FlightBookingSytem_BLL\\Service\\ThongKeDoanhThuService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T16:18:08.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BaoCaoThongKe.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\BaoCaoThongKe.cs",
-              "RelativeDocumentMoniker": "FlightBookingSystem_GUI\\Form\\BaoCaoThongKe.cs",
-              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\BaoCaoThongKe.cs [Design]",
-              "RelativeToolTip": "FlightBookingSystem_GUI\\Form\\BaoCaoThongKe.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T14:13:07.816Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BaoCaoThongKe.cs",
-              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\BaoCaoThongKe.cs",
-              "RelativeDocumentMoniker": "FlightBookingSystem_GUI\\Form\\BaoCaoThongKe.cs",
-              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\BaoCaoThongKe.cs",
-              "RelativeToolTip": "FlightBookingSystem_GUI\\Form\\BaoCaoThongKe.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAAiwLwAAAAYAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Program.cs",
+              "RelativeDocumentMoniker": "FlightBookingSystem_GUI\\Program.cs",
+              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Program.cs",
+              "RelativeToolTip": "FlightBookingSystem_GUI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T14:03:11.501Z",
+              "WhenOpened": "2025-04-13T10:39:41.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ThongKeDoanhThuRepo.cs",
-              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_DAL\\Repo\\ThongKeDoanhThuRepo.cs",
-              "RelativeDocumentMoniker": "FlightBookingSystem_DAL\\Repo\\ThongKeDoanhThuRepo.cs",
-              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_DAL\\Repo\\ThongKeDoanhThuRepo.cs",
-              "RelativeToolTip": "FlightBookingSystem_DAL\\Repo\\ThongKeDoanhThuRepo.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAwBYAAAARAAAAAAAAAA==",
+              "Title": "NhanVienRepo.cs",
+              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_DAL\\Repo\\NhanVienRepo.cs",
+              "RelativeDocumentMoniker": "FlightBookingSystem_DAL\\Repo\\NhanVienRepo.cs",
+              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_DAL\\Repo\\NhanVienRepo.cs",
+              "RelativeToolTip": "FlightBookingSystem_DAL\\Repo\\NhanVienRepo.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAxwBMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T14:51:05.956Z",
+              "WhenOpened": "2025-04-13T10:31:32.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ThanhToanRepo.cs",
-              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_DAL\\Repo\\ThanhToanRepo.cs",
-              "RelativeDocumentMoniker": "FlightBookingSystem_DAL\\Repo\\ThanhToanRepo.cs",
-              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_DAL\\Repo\\ThanhToanRepo.cs",
-              "RelativeToolTip": "FlightBookingSystem_DAL\\Repo\\ThanhToanRepo.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "TaiKhoanService.cs",
+              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSytem_BLL\\Service\\TaiKhoanService.cs",
+              "RelativeDocumentMoniker": "FlightBookingSytem_BLL\\Service\\TaiKhoanService.cs",
+              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSytem_BLL\\Service\\TaiKhoanService.cs",
+              "RelativeToolTip": "FlightBookingSytem_BLL\\Service\\TaiKhoanService.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAswI0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T14:50:53.323Z"
+              "WhenOpened": "2025-04-13T10:14:28.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaiKhoanNhanVien.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\TaiKhoanNhanVien.cs",
+              "RelativeDocumentMoniker": "FlightBookingSystem_GUI\\Form\\TaiKhoanNhanVien.cs",
+              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\TaiKhoanNhanVien.cs [Design]",
+              "RelativeToolTip": "FlightBookingSystem_GUI\\Form\\TaiKhoanNhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T09:48:39.512Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaiKhoanNhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\TaiKhoanNhanVien.cs",
+              "RelativeDocumentMoniker": "FlightBookingSystem_GUI\\Form\\TaiKhoanNhanVien.cs",
+              "ToolTip": "C:\\Users\\add\\Pictures\\DoAnLTCSDL\\FlightBookingSystem\\FlightBookingSystem_GUI\\Form\\TaiKhoanNhanVien.cs",
+              "RelativeToolTip": "FlightBookingSystem_GUI\\Form\\TaiKhoanNhanVien.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAADgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T09:48:33.146Z",
+              "EditorCaption": ""
             }
           ]
         }

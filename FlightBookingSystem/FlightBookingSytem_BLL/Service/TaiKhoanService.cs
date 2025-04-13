@@ -16,11 +16,13 @@ namespace FlightBookingSytem_BLL.Service
         private TaiKhoanRepo taiKhoanRepo;
         private NguoiDungRepo nguoiDungRepo;
         private KhachHangRepo khachHangRepo;
+        private NhanVienRepo nhanVienRepo;
         public TaiKhoanService()
         {
             taiKhoanRepo = new TaiKhoanRepo();
             nguoiDungRepo = new NguoiDungRepo();
             khachHangRepo = new KhachHangRepo();
+            nhanVienRepo = new NhanVienRepo();
         }
 
         private bool kiemTraSDT(string sdt)
@@ -112,13 +114,32 @@ namespace FlightBookingSytem_BLL.Service
             }
         }
 
-        public void taoTaiKhoanNhanVien()
+        public void taoTaiKhoanNhanVien(string ho, string ten, string email, string soDienThoai, string gioiTinh, string ghiChu, string tenDangNhap, string matKhau)
         {
+            NguoiDung u = new NguoiDung
+            {
+                Ho = ho,
+                Ten = ten,
+                Email = email,
+                SoDienThoai = soDienThoai,
+                GioiTinh = gioiTinh,
+            };
+            nguoiDungRepo.themNguoiDuong(u);
+
+            NhanVien nhanVien = new NhanVien
+            {
+                MaNV = u.IdNguoiDung,
+                NgayVaoLam = DateTime.Now,
+                Luong = 5000000,
+                GhiChu = ghiChu
+            };
+            nhanVienRepo.themNhanVien(nhanVien);
+
             TaiKhoan tk = new TaiKhoan
             {
-                TenDangNhap = "LeThanhDan",
-                MatKhau = BCrypt.Net.BCrypt.HashPassword("1"),
-                IdNguoiDung = 2,
+                TenDangNhap = tenDangNhap,
+                MatKhau = BCrypt.Net.BCrypt.HashPassword(matKhau),
+                IdNguoiDung = u.IdNguoiDung,
                 VaiTro = "Employee"
             };
             taiKhoanRepo.themTaiKhoan(tk);

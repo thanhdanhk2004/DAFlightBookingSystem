@@ -126,6 +126,7 @@
             btQuanLyNhanVien.TabIndex = 4;
             btQuanLyNhanVien.Text = "Thêm tài khoản";
             btQuanLyNhanVien.UseVisualStyleBackColor = false;
+            btQuanLyNhanVien.Click += btQuanLyNhanVien_Click;
             // 
             // btThongKe
             // 
