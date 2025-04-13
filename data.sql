@@ -297,15 +297,50 @@ VALUES
 
 INSERT INTO DonHang (MaDH, NgayDatHang, TongGiaTriDonHang, MaKH)
 VALUES
-('DH012', '2025-03-10', 300000, 16),
 ('DH013', '2025-03-15', 600000, 17),
 ('DH014', '2025-03-20', 100000, 5),
 ('DH015', '2025-03-25', 700000, 6),
 
+INSERT INTO DonHang (MaDH, NgayDatHang, TongGiaTriDonHang, MaKH)
+Values
 ('DH016', '2025-04-05', 800000, 7),
 ('DH017', '2025-04-10', 250000, 8),
 ('DH018', '2025-04-15', 150000, 9),
 ('DH019', '2025-04-20', 550000, 10),
 ('DH020', '2025-04-25', 350000, 11);
 
+INSERT INTO ThanhToan (MaThanhToan, SoTien, NgayThanhToan, PhuongThucThanhToan, MaDH)
+VALUES
+('TT001', 150000, '2025-01-06', 'Tiền mặt', 'DH001'),
+('TT002', 250000, '2025-01-11', 'Chuyển khoản', 'DH002'),
+('TT003', 100000, '2025-01-16', 'Thẻ tín dụng', 'DH003'),
+('TT004', 200000, '2025-01-21', 'Tiền mặt', 'DH004'),
+('TT005', 300000, '2025-01-26', 'Chuyển khoản', 'DH005'),
+
+('TT006', 400000, '2025-02-06', 'Thẻ tín dụng', 'DH006'),
+('TT007', 350000, '2025-02-11', 'Tiền mặt', 'DH007'),
+('TT008', 250000, '2025-02-16', 'Chuyển khoản', 'DH008'),
+('TT009', 450000, '2025-02-21', 'Tiền mặt', 'DH009'),
+('TT010', 500000, '2025-02-26', 'Thẻ tín dụng', 'DH010'),
+
+('TT011', 200000, '2025-03-06', 'Chuyển khoản', 'DH011'),
+('TT013', 600000, '2025-03-16', 'Thẻ tín dụng', 'DH013'),
+('TT014', 100000, '2025-03-21', 'Chuyển khoản', 'DH014'),
+('TT015', 700000, '2025-03-26', 'Tiền mặt', 'DH015'),
+
+('TT016', 800000, '2025-04-06', 'Chuyển khoản', 'DH016'),
+('TT017', 250000, '2025-04-11', 'Tiền mặt', 'DH017'),
+('TT018', 150000, '2025-04-16', 'Thẻ tín dụng', 'DH018'),
+('TT019', 550000, '2025-04-21', 'Tiền mặt', 'DH019'),
+('TT020', 350000, '2025-04-26', 'Chuyển khoản', 'DH020');
+
+
 select * from DonHang
+select * from KhachHang
+select sum(SoTien)
+from ThanhToan
+where DATEPART(QUARTER,NgayThanhToan) = 2
+
+select sum(SoTien)
+from ThanhToan
+WHERE YEAR(NgayThanhToan) = 2025

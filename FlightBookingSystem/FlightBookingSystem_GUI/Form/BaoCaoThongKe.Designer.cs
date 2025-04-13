@@ -78,6 +78,7 @@
             rbDuong.TabIndex = 2;
             rbDuong.Text = "Biểu đồ đường";
             rbDuong.UseVisualStyleBackColor = true;
+            rbDuong.CheckedChanged += rbDuong_CheckedChanged;
             // 
             // rdTron
             // 
@@ -89,6 +90,7 @@
             rdTron.TabIndex = 1;
             rdTron.Text = "Biểu đồ tròn";
             rdTron.UseVisualStyleBackColor = true;
+            rdTron.CheckedChanged += rdTron_CheckedChanged;
             // 
             // rdCot
             // 
@@ -102,6 +104,7 @@
             rdCot.TabStop = true;
             rdCot.Text = "Biểu đồ cột";
             rdCot.UseVisualStyleBackColor = true;
+            rdCot.CheckedChanged += rdCot_CheckedChanged;
             // 
             // groupBox2
             // 
@@ -127,6 +130,7 @@
             rdNam.TabIndex = 2;
             rdNam.Text = "Theo năm";
             rdNam.UseVisualStyleBackColor = true;
+            rdNam.CheckedChanged += rdNam_CheckedChanged;
             // 
             // rdQuy
             // 
@@ -138,6 +142,7 @@
             rdQuy.TabIndex = 1;
             rdQuy.Text = "Theo quý";
             rdQuy.UseVisualStyleBackColor = true;
+            rdQuy.CheckedChanged += rdQuy_CheckedChanged;
             // 
             // rdThang
             // 
@@ -151,6 +156,7 @@
             rdThang.TabStop = true;
             rdThang.Text = "Theo tháng";
             rdThang.UseVisualStyleBackColor = true;
+            rdThang.CheckedChanged += rdThang_CheckedChanged;
             // 
             // panelChart
             // 
